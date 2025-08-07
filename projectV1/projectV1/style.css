@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e6ecf0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  /* Takes all available space, pushing footer down */
+}
+
+.container {
+  max-width: 600px;
+  margin: 2em auto;
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #08457e;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1.5em;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 0.8em 1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.contact-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1em;
+}
+
+.contact-name {
+  flex: 1;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.actions {
+  display: flex;
+  gap: 0.8em;
+  color: #555;
+}
+
+.actions i {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.actions i:hover {
+  color: #0077cc;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup.active {
+  display: flex;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.popup-content h3 {
+  margin-top: 0;
+  color: #08457e;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+
+.controls button {
+  padding: 0.6em 1.2em;
+  background-color: #08457e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s;
+}
+
+.controls button:hover {
+  background-color: #0a63b0;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #ccc;
+}
+.contact-card.hovered {
+  background-color: #e0e0e0; 
+  cursor: pointer;
+}
